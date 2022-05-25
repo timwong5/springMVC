@@ -31,7 +31,7 @@ View：显示页面
 
 
 
-# 1.2 什么是SpringMVC
+## 1.2 什么是SpringMVC
 
 Spring MVC的特点：
 
@@ -47,7 +47,10 @@ Spring MVC的特点：
 
 6.简洁灵活
 
-# 1.3 使用注解开发SpringMVC
+## 1.3 使用注解开发SpringMVC
+
+![avatar](https://mmbiz.qpic.cn/mmbiz_png/uJDAUKrGC7IicxBZbkh0D4dJJiaXSzGEXyzsXDPy7oAJFsBvvBibiaFWpSp75vFIEOCBm7wnt4JKXJCHB9MflUycKw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
 
 实现步骤其实非常的简单：
 
@@ -69,5 +72,40 @@ Spring MVC的特点：
 
 通常，我们只需要手动配置视图解析器，而处理器映射器和处理器适配器只需要开启注解驱动即可，而省去了大段的xml配置
 
-![avatar](https://mmbiz.qpic.cn/mmbiz_png/uJDAUKrGC7IicxBZbkh0D4dJJiaXSzGEXyzsXDPy7oAJFsBvvBibiaFWpSp75vFIEOCBm7wnt4JKXJCHB9MflUycKw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+Spring-servlet配置的常用依赖如下
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+```
 
+## 1.4 Controller详解
+
+控制器Controller
+
+1.控制器复杂提供访问应用程序的行为，通常通过接口定义或注解定义两种方法实现。
+
+2.控制器负责解析用户的请求并将其转换为一个模型。
+
+3.在Spring MVC中一个控制器类可以包含多个方法
+
+4.在Spring MVC中，对于Controller的配置方式有很多种
+
+实现Controller接口
+Controller是一个接口，在org.springframework.web.servlet.mvc包下，接口中只有一个方法；
+
+```java
+//实现该接口的类获得控制器功能
+public interface Controller {
+    //处理请求且返回一个模型与视图对象
+    ModelAndView handleRequest(HttpServletRequest var1, HttpServletResponse var2) throws Exception;
+}
+```

@@ -9,6 +9,7 @@
         <module name="springmvc03-annotation" />
         <module name="springmvc02-hello" />
         <module name="springmvc01-servlet" />
+        <module name="springmvc04-controller" />
       </profile>
     </annotationProcessing>
   </component>

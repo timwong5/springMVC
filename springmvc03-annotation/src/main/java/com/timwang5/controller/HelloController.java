@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //@Controller标识的类，该类代表控制器类(控制层/表现层)
-//此处@RequestMapping 代表将 @RequestMapping 注解在 UserController 类上，
+//此处@RequestMapping 代表将 @RequestMapping 注解在 HelloController 类上，
 // 这时类的注解是相对于 Web 根目录，而方法上的是相对于类上的路径 即多层拼接 http://localhost:8080/hello/h1
 @Controller
 @RequestMapping("/hello")
