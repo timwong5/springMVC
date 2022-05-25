@@ -47,3 +47,27 @@ Spring MVC的特点：
 
 6.简洁灵活
 
+# 1.3 使用注解开发SpringMVC
+
+实现步骤其实非常的简单：
+
+1.新建一个web项目
+
+2.导入相关jar包
+
+3.编写web.xml , 注册DispatcherServlet
+
+4.编写springmvc配置文件
+
+5.接下来就是去创建对应的控制类 , controller
+
+6.最后完善前端视图和controller之间的对应
+
+使用springMVC必须配置的三大件：
+
+处理器映射器、处理器适配器、视图解析器
+
+通常，我们只需要手动配置视图解析器，而处理器映射器和处理器适配器只需要开启注解驱动即可，而省去了大段的xml配置
+
+![avatar](https://mmbiz.qpic.cn/mmbiz_png/uJDAUKrGC7IicxBZbkh0D4dJJiaXSzGEXyzsXDPy7oAJFsBvvBibiaFWpSp75vFIEOCBm7wnt4JKXJCHB9MflUycKw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
