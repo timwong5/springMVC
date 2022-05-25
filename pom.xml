@@ -11,6 +11,7 @@
     <modules>
         <module>springmvc01-servlet</module>
         <module>springmvc02-hello</module>
+        <module>springmvc03-annotation</module>
     </modules>
 
     <properties>

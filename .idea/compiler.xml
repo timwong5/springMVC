@@ -8,10 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc03-annotation" />
         <module name="springmvc02-hello" />
+        <module name="springmvc01-servlet" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="springmvc01-servlet" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
